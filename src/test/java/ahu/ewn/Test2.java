@@ -1,4 +1,4 @@
-package me.aichina;
+package ahu.ewn;
 
 import me.aichina.board.PieceType;
 import me.aichina.game.GameState;
@@ -14,7 +14,7 @@ import me.aichina.strategy.move.StaticEvaluationMove;
  *
  * @author 陆梦轩
  */
-public class Test {
+public class Test2 {
 
     public static void main(String[] args) {
         // 对弈轮数
@@ -24,7 +24,7 @@ public class Test {
         // 红获胜轮数
         int redWinNum = 0;
         // 先手方，即蓝方先下棋
-        PieceType firstPlayer = PieceType.BLUE;
+        PieceType firstPlayer = PieceType.RED;
 
         // 指定蓝方的布局策略和下棋策略
         Player bluePlayer = new Player(PieceType.BLUE, new StaticInitial(), new MySuperMove());
@@ -59,7 +59,7 @@ public class Test {
           //  firstPlayer = firstPlayer == PieceType.BLUE ? PieceType.RED : PieceType.BLUE;
         }// for(int cnt = 1; cnt <= gameNum; cnt++)
         // 打印结果
-        System.out.println("blue 改良UCT算法（先手） vs red 估值: " + blueWinNum + " vs " + redWinNum);
+        System.out.println("blue 改良UCT算法（后手） vs red 估值: " + blueWinNum + " vs " + redWinNum);
     }
 
 }

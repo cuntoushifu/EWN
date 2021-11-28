@@ -163,8 +163,8 @@ public class PlayerSettingPanel extends JPanel {
 		moveStrategyTabbedPane.setBounds(10, 114, 161, 236);
 		moveStrategyTabbedPane.addTab("随机", new RandomMovePanel(this.player));
 		moveStrategyTabbedPane.addTab("直接估值", new StaticEvaluationMovePanel(this.player));
-		moveStrategyTabbedPane.addTab("策略1", new MySuperMovePanel(this.player));
-		moveStrategyTabbedPane.addTab("策略2", new MySuperMovePanel2(this.player));
+		moveStrategyTabbedPane.addTab("策略", new MySuperMovePanel(this.player));
+//		moveStrategyTabbedPane.addTab("策略2", new MySuperMovePanel2(this.player));
 
 		moveStrategyTabbedPane.setSelectedIndex(0);
 		MoveStrategyPanel panel = (MoveStrategyPanel)moveStrategyTabbedPane.getSelectedComponent();
