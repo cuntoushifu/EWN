@@ -45,15 +45,12 @@ public class ChessBoard {
             byte b = getPieceByPoint(1, 1);
             String id = Piece.toString(b);
             char[] chars = id.toCharArray();
-
             if (id.equals("-")) {
                 System.out.println("不能直接赢");
                 return null;
             }
-
             if (chars[0] == 'B') {
                 boolean b1 = bs.contains(b);
-
                 if (b1) {
                     System.out.println(player+"不能直接赢");
                     return b;
@@ -70,7 +67,7 @@ public class ChessBoard {
 
             System.out.println(id+"                 id");
             if (id.equals("-")) {
-                System.out.println(player+"不能直接赢 蓝子"+id);
+                System.out.println(player+"不能直接赢");
                 return null;
             }
             char[] chars = id.toCharArray();

@@ -4,12 +4,10 @@ import ahu.ewn.board.PieceType;
 import ahu.ewn.game.GameState;
 import ahu.ewn.game.Move;
 import ahu.ewn.game.Player;
-import ahu.ewn.strategy.evaluation.MySuperEvaluate;
 import ahu.ewn.strategy.evaluation.ODEMAEvaluate;
-import ahu.ewn.strategy.evaluation.RandomEvaluate;
-import ahu.ewn.strategy.move.MyTestMove;
 import ahu.ewn.strategy.initial.StaticInitial;
 import ahu.ewn.strategy.move.MySuperMove;
+import ahu.ewn.strategy.move.MyTestMove;
 import ahu.ewn.strategy.move.StaticEvaluationMove;
 
 /**
@@ -17,11 +15,11 @@ import ahu.ewn.strategy.move.StaticEvaluationMove;
  *
  * @author 陆梦轩
  */
-public class Test {
+public class TestB {
 
     public static void main(String[] args) {
         // 对弈轮数
-        int gameNum =1000;
+        int gameNum =10;
         // 蓝方获胜轮数
         int blueWinNum = 0;
         // 红获胜轮数
@@ -30,12 +28,12 @@ public class Test {
         PieceType firstPlayer = PieceType.BLUE;
 
         // 指定蓝方的布局策略和下棋策略
-        Player bluePlayer = new Player(PieceType.BLUE, new StaticInitial(), new MySuperMove());
+        Player bluePlayer = new Player(PieceType.BLUE, new StaticInitial(), new MyTestMove());
         // Player bluePlayer = new Player(PieceType.BLUE, new StaticInitial(),  new StaticEvaluationMove(new MySuperEvaluate()));
         // 指定红方的布局策略和下棋策略
         // Player redPlayer = new Player(PieceType.RED, new StaticInitial(), new StaticEvaluationMove(new MySuperEvaluate()));
       //  Player redPlayer = new Player(PieceType.RED, new StaticInitial(), new MySuperMove());
-        Player redPlayer = new Player(PieceType.RED, new StaticInitial(),new StaticEvaluationMove(new ODEMAEvaluate()) );
+        Player redPlayer = new Player(PieceType.RED, new StaticInitial(), new StaticEvaluationMove(new ODEMAEvaluate()));
 
         // 定义一局游戏，并设置玩家为上面定义的玩家
         GameState game = new GameState();
@@ -59,10 +57,11 @@ public class Test {
             else redWinNum += 1;
             System.out.println("第"+cnt+"局"+"获胜方："+game.getWinner()+"   红方获胜场次："+redWinNum+"   蓝方获胜场次："+blueWinNum);
             // 切换先手方
-          //  firstPlayer = firstPlayer == PieceType.BLUE ? PieceType.RED : PieceType.BLUE;
+            //  firstPlayer = firstPlayer == PieceType.BLUE ? PieceType.RED : PieceType.BLUE;
         }// for(int cnt = 1; cnt <= gameNum; cnt++)
         // 打印结果
-        System.out.println("blue 改良UCT算法（先手） vs red 估值: " + blueWinNum + " vs " + redWinNum);
+        System.out.println("blue   vs red 估值: " + blueWinNum + " vs " + redWinNum);
+        System.out.println("\n\n==================================================================\n\n"  );
     }
 
 }

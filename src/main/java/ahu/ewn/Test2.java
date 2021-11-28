@@ -18,7 +18,7 @@ public class Test2 {
 
     public static void main(String[] args) {
         // 对弈轮数
-        int gameNum =300;
+        int gameNum =1000;
         // 蓝方获胜轮数
         int blueWinNum = 0;
         // 红获胜轮数

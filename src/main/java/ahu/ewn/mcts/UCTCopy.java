@@ -123,12 +123,12 @@ public class UCTCopy {
             if (o1.getUCTValue() < o2.getUCTValue()) return 1;
             return 0;
         }).collect(Collectors.toList());
-        for (MoveUCT moveUCT : moveUCTS) {
-            System.out.println("Move:"+ moveUCT.getMove()+" UCBValue："+moveUCT.getUCTValue());
-        }
-        System.out.println("选中走法的UCBValue："+moveUCTS.get(0).getUCTValue());
-        System.out.println();
-        System.out.println();
+//        for (MoveUCT moveUCT : moveUCTS) {
+//            System.out.println("Move:"+ moveUCT.getMove()+" UCBValue："+moveUCT.getUCTValue());
+//        }
+//        System.out.println("选中走法的UCBValue："+moveUCTS.get(0).getUCTValue());
+//        System.out.println();
+//        System.out.println();
 
         return moveUCTS;
     }
