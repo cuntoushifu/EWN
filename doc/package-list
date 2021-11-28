@@ -1,9 +1,9 @@
 ahu.ewn
-ahu.ewn.board
-ahu.ewn.game
-ahu.ewn.record
-ahu.ewn.strategy.dice
-ahu.ewn.strategy.evaluation
-ahu.ewn.strategy.initial
-ahu.ewn.strategy.move
-ahu.ewn.ui
+me.aichina.board
+me.aichina.game
+me.aichina.record
+me.aichina.strategy.dice
+me.aichina.strategy.evaluation
+me.aichina.strategy.initial
+me.aichina.strategy.move
+me.aichina.ui
