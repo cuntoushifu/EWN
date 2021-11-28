@@ -1,4 +1,4 @@
-package ahu.ewn;
+package me.aichina;
 
 import me.aichina.board.PieceType;
 import me.aichina.game.GameState;

@@ -29,7 +29,7 @@ public class AppTest
     }
 
     /**
-     * Rigourous Test :-)
+     * Rigourous me.aichina.Test :-)
      */
     public void testApp()
     {
